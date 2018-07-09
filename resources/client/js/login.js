@@ -41,15 +41,15 @@ function resetNewUserForm() {
 function pageLoad() {
     resetLoginForm();
     resetNewUserForm();
+    trianglify();
 
+}
+
+function trianglify() {
     const pattern = Trianglify({
         width: window.innerWidth,
         height: window.innerHeight,
-        seed: 1235456,
-        variance: 1,
-        cell_size: 69
     });
-
     const body = $('body');
     body.before(pattern.canvas);
     body.addClass('fixed-top');
