@@ -44,14 +44,13 @@ function pageLoad() {
 
     const pattern = Trianglify({
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
+        seed: 1235456,
+        variance: 1,
+        cell_size: 69
     });
 
-    const firstDiv = $('div:first');
-    firstDiv.before(pattern.canvas);
-    firstDiv.addClass('fixed-top');
-
     const body = $('body');
-    body.css('overflow-y', 'hidden');
-    body.css('overflow-x', 'hidden');
+    body.before(pattern.canvas);
+    body.addClass('fixed-top');
 }

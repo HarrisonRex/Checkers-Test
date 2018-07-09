@@ -92,25 +92,17 @@ public class MessageController {
     }
 
 
+    @POST
     @Path("edit")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
-    public String editMessage(@FormParam("messageId") int messageId,
-                              @FormParam("messageText") String messageText,
-                              @CookieParam("sessionToken") Cookie sessionCookie) {
-
-        String currentUsername = UserService.validateSessionCookie(sessionCookie);
-        if (currentUsername == null) return "Error: Invalid user session token";
-
+    public String editMessage(@FormParam("messageId") int messageId, @FormParam("messageText") String messageText) {
         Console.log("/message/edit - Message " + messageId);
         Message message = MessageService.selectById(messageId);
-        String messageDate = new Date().toString();
         if (message == null) {
             return "That message doesn't appear to exist";
         } else {
-            if (!message.getAuthor().equals(currentUsername)) {
-                return "That message doesn't belong to you!";
-            }
+            String messageDate = new Date().toString();
             message.setText(messageText);
             message.setPostDate(messageDate);
             return MessageService.update(message);
