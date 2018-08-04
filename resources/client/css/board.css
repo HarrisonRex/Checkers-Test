@@ -1,14 +1,17 @@
-table.checkersboard {
+table.checkersBoard {
     margin: 80px auto;
-    background: #999;
-    border: 2px solid #333;
+    background: #ffffff;
+    border: 0px solid #333;
     border-collapse: collapse; /* */
 }
-td.checkersboard {
+td.checkersBoard {
     width: 70px; height: 70px;
-    border: 1px solid #333; /* */
+    border: 2px solid #333; /* */
 }
-tr.checkersboard:nth-child(odd) td.checkersboard:nth-child(even),
-tr.checkersboard:nth-child(even) td.checkersboard:nth-child(odd) {
-    background: white;
+td.ends {
+    width: 70px; height: 70px;
+}
+tr.checkersBoard:nth-child(even) td.checkersBoard:nth-child(odd) ,
+tr.checkersBoard:nth-child(odd) td.checkersBoard:nth-child(even) {
+    background: #696969;
 }
