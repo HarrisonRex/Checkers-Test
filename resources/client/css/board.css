@@ -1,8 +1,6 @@
 table.checkersBoard {
-    margin: 80px auto;
+    margin: 5px auto;
     background: #ffffff;
-    border: 0px solid #333;
-    border-collapse: collapse; /* */
 }
 td.checkersBoard {
     width: 70px; height: 70px;
