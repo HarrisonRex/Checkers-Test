@@ -41,5 +41,4 @@ public class DatabaseConnection {
             System.out.println("Database disconnection error: " + exception.getMessage());
         }
     }
-
 }

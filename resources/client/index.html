@@ -16,46 +16,95 @@
         <script src="/client/js/trianglify.min.js"></script>
 
         <link href="/client/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/client/css/board.css" rel="stylesheet">
 
     </head>
 
-    <body class="container bg-danger" onload="pageLoad()">
-    <div class="jumbotron text-center">
-        <h1 class="display-4" id="title">The Clop!</h1>
-        <div class="font-italic text-secondary">
-            Currently logged in as <span id="username">...</span>
-            <button id="logout" class="btn btn-sm btn-outline-danger ml-2">
-                Log out
-            </button>
-        </div>
-    </div>
-    <div class="container p-3">
-        <form id="messageForm" class="needs-validation" action="/message/new" method="post" >
-            <div class="form-group form-row">
-                <div class="col-9">
-                    <label class="w-100">Message
-                        <input class="form-control input-lg" name="messageText" placeholder="I Smell" required>
-                    </label>
-                </div>
-                <div class="col-1">
-                    <button id="messageSubmit" class="btn btn-success mt-4">Post</button>
-                </div>
-                <div class="dropdown col-2">
-                    Select a Board:
-                    <select class="btn btn-primary dropdown-toggle" id="bSelect" onchange="loadMessages()" name="boardC">
-                        <option value="1">Main</option>
-                        <option value="2">Poems</option>
-                        <option value="3">Smelly Society</option>
-                        <option value="4">Cool Corner</option>
-                        <option value="5">I Ran out of ideas</option>
-                    </select>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div id="messages">
-        <div class="alert-warning text-center">No Farts Yet!</div>
-    </div>
+    <body onload="pageLoad()">
+
+    <table class="checkersboard">
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+            <td class="checkersboard"></td>
+        </tr>
+    </table>
+
     </body>
 
 </html>

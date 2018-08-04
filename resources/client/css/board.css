@@ -1,0 +1,14 @@
+table.checkersboard {
+    margin: 80px auto;
+    background: #999;
+    border: 2px solid #333;
+    border-collapse: collapse; /* */
+}
+td.checkersboard {
+    width: 70px; height: 70px;
+    border: 1px solid #333; /* */
+}
+tr.checkersboard:nth-child(odd) td.checkersboard:nth-child(even),
+tr.checkersboard:nth-child(even) td.checkersboard:nth-child(odd) {
+    background: white;
+}
