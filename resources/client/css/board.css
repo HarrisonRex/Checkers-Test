@@ -4,10 +4,12 @@ table.checkersBoard {
 }
 td.checkersBoard {
     width: 70px; height: 70px;
-    border: 2px solid #333; /* */
+    border: 2px solid #333;
+    font-size: 42px;
 }
 td.ends {
     width: 70px; height: 70px;
+    font-size: 30px;
 }
 tr.checkersBoard:nth-child(even) td.checkersBoard:nth-child(odd) ,
 tr.checkersBoard:nth-child(odd) td.checkersBoard:nth-child(even) {
